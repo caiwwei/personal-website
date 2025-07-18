@@ -12,7 +12,7 @@
   }
   
   a {
-    color: #007acc;
+    color: #74a0bf;
     text-decoration: none;
   }
   a:hover {
@@ -28,8 +28,8 @@
   .hero {
     text-align: center;
     padding: 4rem 1rem;
-    background: linear-gradient(to right, #007acc, #00bfff);
-    color: white;
+    background: none
+    color: #222;
     border-radius: 20px;
     margin-bottom: 2rem;
   }
@@ -50,7 +50,7 @@
   
   section h2 {
     font-size: 2rem;
-    color: #007acc;
+    color: #74a0bf;
     margin-bottom: 1rem;
   }
   
