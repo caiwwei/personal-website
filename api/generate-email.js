@@ -6,10 +6,11 @@ const openai = new OpenAI({
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+    res.status(405).json({ error: "Method not allowed" });
+    return;
   }
 
-  const { name, purpose } = await req.json();
+  const { name, purpose } = req.body;
 
   try {
     const completion = await openai.chat.completions.create({
@@ -23,10 +24,9 @@ export default async function handler(req, res) {
     });
 
     const message = completion.choices[0].message.content;
-
-    return res.status(200).json({ message });
+    res.status(200).json({ message });
   } catch (error) {
     console.error("OpenAI API error:", error);
-    return res.status(500).json({ error: "Failed to generate email" });
+    res.status(500).json({ error: "Failed to generate email" });
   }
 }
