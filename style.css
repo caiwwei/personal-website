@@ -12,7 +12,7 @@
   }
   
   a {
-    color: #74a0bf;
+    color: #30495f;
     text-decoration: none;
   }
   a:hover {
@@ -27,9 +27,7 @@
   
   .hero {
     text-align: center;
-    padding: 4rem 1rem;
-    background: none
-    color: #222;
+    padding: 2rem 1rem 3rem;
     border-radius: 20px;
     margin-bottom: 2rem;
   }
@@ -200,4 +198,61 @@
 
 .tab:hover {
   text-decoration: underline;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(28, 92, 134, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(28, 92, 134, 0.15);
+}
+
+form {
+  max-width: 600px;
+  margin-top: 2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+label {
+  font-weight: 500;
+  color: #30495f;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #74a0bf;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #5a87a3;
 }

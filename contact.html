@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarah Liang</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+</head>
+<body>
+
+  <nav class="top-tabs">
+    <a href="index.html" class="tab">Home</a>
+    <a href="projects.html" class="tab">Projects</a>
+    <a href="contact.html" class="tab active">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <header class="hero">
+      <h1>Contact</h1>
+      <p>Let’s connect! Feel free to reach out via email or social links below.</p>
+    </header>
+
+<section class="contact">
+  <form id="emailGeneratorForm">
+  <label for="name">Name</label><br />
+  <input type="text" id="name" required /><br /><br />
+
+  <label for="purpose">What is your message about?</label><br />
+  <input type="text" id="purpose" required /><br /><br />
+
+  <button type="submit">Generate Email</button>
+</form>
+
+<br />
+
+<label for="generated">Generated Email</label><br />
+<textarea id="generated" rows="8" readonly></textarea>
+
+</section>
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
