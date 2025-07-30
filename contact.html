@@ -6,13 +6,14 @@
   <title>Sarah Liang</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-    <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="icon" href="favicon.png" type="image/png" />
 </head>
 <body>
 
   <nav class="top-tabs">
     <a href="index.html" class="tab">Home</a>
     <a href="projects.html" class="tab">Projects</a>
+    <a href="experience.html" class="tab">Experience</a>
     <a href="contact.html" class="tab active">Contact</a>
   </nav>
 
@@ -20,30 +21,36 @@
 
     <header class="hero">
       <h1>Contact</h1>
-      <p>Let’s connect! Feel free to reach out via email or social links below.</p>
+      <p>feel free to reach out via email or social links below</p>
     </header>
 
-<section class="contact">
-  <form id="emailGeneratorForm">
-  <label for="name">Name</label><br />
-  <input type="text" id="name" required /><br /><br />
+    <section class="contact">
+      <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+        <label for="name">Name</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
 
-  <label for="purpose">What is your message about?</label><br />
-  <input type="text" id="purpose" required /><br /><br />
+        <label for="email">Your Email</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
 
-  <button type="submit">Generate Email</button>
-</form>
+        <label for="subject">Subject</label><br />
+        <input type="text" id="subject" name="subject" required /><br /><br />
 
-<br />
+        <label for="message">Message</label><br />
+        <textarea id="message" name="message" rows="8" required></textarea><br /><br />
 
-<label for="generated">Generated Email</label><br />
-<textarea id="generated" rows="8" readonly></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
 
-</section>
-
+    
+    <section class="contact">
+      <h2>Links</h2>
+      <p><a href="mailto:ssarahliang@gmail.com">ssarahliang@gmail.com</a></p>
+      <p><a href="https://github.com/caiwwei" target="_blank">https://github.com/caiwwei</a></p>
+      <p><a href="https://www.linkedin.com/in/ssarahliang/" target="_blank">https://www.linkedin.com/in/ssarahliang</a></p>
+    </section>
 
   </div>
 
-  <script src="script.js"></script>
 </body>
 </html>
