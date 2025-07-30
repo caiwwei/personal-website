@@ -7,7 +7,7 @@
   body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to bottom, #e0f2ff, #f8fbff);
-    color: #2a3d4d;
+    color: #30495f;
     line-height: 1.6;
   }
   
@@ -61,6 +61,7 @@
   padding: 1rem 0 2rem;
   scroll-snap-type: x mandatory;
   scroll-padding: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-scroll::-webkit-scrollbar {
@@ -101,12 +102,37 @@
     justify-content: flex-end;
     padding-right: 0.75rem;
     margin-top: -0.5rem;
+    opacity: 0.9;
   }
 
-  .arrow-icon-img {
-    width: 30px;
-    height: 24px;
-  }
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.projects-header h2 {
+  font-size: 2rem;
+  color: #74a0bf;
+  margin: 0;
+}
+
+.arrow-icon-img {
+  width: 38px;
+  height: 30px;
+  margin-right: 0.5rem;
+}
+
+.arrow-icon-img {
+  animation: arrowBounce 1.2s ease-in-out infinite;
+}
+
+@keyframes arrowBounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
+
 
   .project-card h3 {
     margin-bottom: 0.5rem;
@@ -114,6 +140,7 @@
   
   .contact p {
     margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
   }
   
   .project-card p {
@@ -143,4 +170,8 @@
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.projects {
+  margin-bottom: 1.5rem;
 }
