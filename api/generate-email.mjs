@@ -1,15 +1,15 @@
-const { OpenAI } = require("openai");
+import { OpenAI } from "openai";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, purpose } = req.body;
+  const { name, purpose } = await req.json();
 
   try {
     const completion = await openai.chat.completions.create({
@@ -24,9 +24,9 @@ module.exports = async (req, res) => {
 
     const message = completion.choices[0].message.content;
 
-    res.status(200).json({ message });
+    return res.status(200).json({ message });
   } catch (error) {
     console.error("OpenAI API error:", error);
-    res.status(500).json({ error: "Failed to generate email" });
+    return res.status(500).json({ error: "Failed to generate email" });
   }
-};
+}
